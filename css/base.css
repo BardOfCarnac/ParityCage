@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--amber);
+  font-family: var(--font-main);
+}
+
+.viewer {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.feed {
+  position: relative;
+  z-index: 2;
+  width: min(var(--feed-width), 90vw);
+  margin: 0 auto;
+  padding: 24px 0 96px;
+}
