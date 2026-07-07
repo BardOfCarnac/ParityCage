@@ -36,7 +36,7 @@ function transitionEntry(entry) {
       setTimeout(() => {
         refreshedPlate.classList.remove("is-present");
         REDWIRE_IS_TRANSITIONING = false;
-      }, 220);
+      }, REDWIRE_CONFIG.presenceDuration);
     });
-  }, 220);
+  }, REDWIRE_CONFIG.presenceDuration);
 }
