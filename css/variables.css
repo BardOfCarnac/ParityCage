@@ -1,0 +1,12 @@
+:root {
+  --bg: #050000;
+  --red: #ff3b2f;
+  --orange: #ff8a3d;
+  --amber: #ffd18a;
+  --white: #fff3df;
+
+  --feed-width: 760px;
+  --rail-height: 58px;
+
+  --font-main: system-ui, sans-serif;
+}
