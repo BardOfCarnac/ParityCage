@@ -9,4 +9,5 @@
   --rail-height: 58px;
 
   --font-main: system-ui, sans-serif;
+  --presence-duration: 220ms;
 }
