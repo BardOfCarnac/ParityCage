@@ -6,28 +6,35 @@ function transitionEntry(entry) {
   isTransitioning = true;
 
   const entryId = entry.dataset.entryId;
+  const plate = entry.querySelector(".projection-plate");
 
-  entry.classList.add("is-leaving");
+  if (!plate) {
+    isTransitioning = false;
+    return;
+  }
+
+  plate.classList.add("is-leaving");
 
   setTimeout(() => {
     toggleExpanded(entryId);
     render();
 
     const refreshedEntry = document.querySelector(`[data-entry-id="${entryId}"]`);
+    const refreshedPlate = refreshedEntry?.querySelector(".projection-plate");
 
-    if (!refreshedEntry) {
+    if (!refreshedPlate) {
       isTransitioning = false;
       return;
     }
 
-    refreshedEntry.classList.add("is-entering");
+    refreshedPlate.classList.add("is-entering");
 
     requestAnimationFrame(() => {
-      refreshedEntry.classList.remove("is-entering");
-      refreshedEntry.classList.add("is-present");
+      refreshedPlate.classList.remove("is-entering");
+      refreshedPlate.classList.add("is-present");
 
       setTimeout(() => {
-        refreshedEntry.classList.remove("is-present");
+        refreshedPlate.classList.remove("is-present");
         isTransitioning = false;
       }, 220);
     });
