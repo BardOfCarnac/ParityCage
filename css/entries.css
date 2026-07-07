@@ -9,8 +9,20 @@
   min-height: 92px;
   padding: 14px 16px 14px 46px;
 
+  opacity: 1;
+  transition: opacity 220ms ease;
+
   border: 1px solid rgba(255, 60, 40, 0.2);
   background: rgba(255, 60, 40, 0.025);
+}
+
+.projection-plate.is-leaving,
+.projection-plate.is-entering {
+  opacity: 0;
+}
+
+.projection-plate.is-present {
+  opacity: 1;
 }
 
 .priority {
